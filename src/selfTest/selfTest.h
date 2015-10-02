@@ -53,11 +53,8 @@ public:
 	}
 	std::vector<TestCase> testCase;
 
-	bool addCase(std::string const& _name, std::vector<std::string> const& _params, int _status, std::string const& _stdcout, std::string const& _stdcerr) {
-		testCase.push_back(TestCase(_name, _params, _status, _stdcout, _stdcerr));
+	bool addCase(std::string const& _name, std::string _params, int _status, std::string const& _stdcout, std::string const& _stdcerr);
 
-		return true;
-	}
 	bool runTests(std::string const& _prog) {
 		bool success = true;
 		for (auto& t : testCase) {
