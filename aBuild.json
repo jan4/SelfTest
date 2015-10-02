@@ -1,0 +1,17 @@
+{
+   "name" : "SelfTest",
+	"extDependencies": [
+		{ "url": "git@78.47.95.250:aBuild/Process" }
+	],
+   "projects" : [
+   	{ "path": "selfTest",
+   		"type": "library",
+   		"dependencies": ["Process/process"]
+   	},
+   	{ "path": "testSelfTest",
+   		"type": "executable",
+   		"dependencies": ["SelfTest/selfTest"]
+   	}
+
+   	]
+}
