@@ -1,7 +1,7 @@
 {
    "name" : "SelfTest",
 	"extDependencies": [
-		{ "url": "git@78.47.95.250:aBuild/Process" }
+		{ "url": "git@cakeface.de:aBuild/Process" }
 	],
    "projects" : [
    	{ "path": "selfTest",
