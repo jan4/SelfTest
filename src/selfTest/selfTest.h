@@ -48,14 +48,14 @@ class SelfTest {
 private:
 public:
 	static SelfTest& getInstance() {
-		static SelfTest* instance = new SelfTest();
-		return *instance;
+		static SelfTest instance;;
+		return instance;
 	}
 	std::vector<TestCase> testCase;
 
-	bool addCase(std::string const& _name, std::string _params, int _status, std::string const& _stdcout, std::string const& _stdcerr);
+	bool addCase(std::string _name, std::string _params, int _status, std::string _stdcout, std::string _stdcerr);
 
-	bool runTests(std::string const& _prog) {
+	bool runTests(std::string _prog) {
 		bool success = true;
 		for (auto& t : testCase) {
 			if (not t.run(_prog)) {

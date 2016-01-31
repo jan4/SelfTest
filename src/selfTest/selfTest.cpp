@@ -16,8 +16,8 @@ static std::vector<std::string> explode(std::string const& _str, std::vector<std
 				delSize = s.length();
 			}
 		}
-		auto _str = str.substr(0, p);
-		retList.push_back(_str);
+		auto subStr = str.substr(0, p);
+		retList.push_back(subStr);
 		if (p == std::string::npos) {
 			return retList;
 		}
@@ -26,9 +26,9 @@ static std::vector<std::string> explode(std::string const& _str, std::vector<std
 	return retList;
 }
 
-bool SelfTest::addCase(std::string const& _name, std::string _params, int _status, std::string const& _stdcout, std::string const& _stdcerr) {
+bool SelfTest::addCase(std::string _name, std::string _params, int _status, std::string _stdcout, std::string _stdcerr) {
 	auto p = explode(_params, {" "});
-	testCase.push_back(TestCase(_name, p, _status, _stdcout, _stdcerr));
+	testCase.emplace_back(_name, p, _status, _stdcout, _stdcerr);
 	return true;
 }
 
