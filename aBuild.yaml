@@ -1,10 +1,3 @@
 name: SelfTest
-projects:
-  - path: selfTest
-    dependencies:
-      - Process/process
-  - path: testSelfTest
-    dependencies:
-      - SelfTest/selfTest
 extDependencies:
   - url: git@cakeface.de:aBuild/Process
