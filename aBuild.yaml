@@ -1,5 +1,3 @@
 name: SelfTest
-extDependencies:
-  - url: git@cakeface.de:aBuild/Process
 extRepositories:
   - url: git@cakeface.de:aBuild/Process
